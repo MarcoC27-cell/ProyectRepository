@@ -8,7 +8,10 @@ namespace MyPrimeraApp.Entidades
 {
     public class Alumno:Entidad
     {
-        public string Email { get; set; }
+        private string v1;
+        private string v2;
+        private int v3;
+
         public int Edad { get; set; } = 12; //Regla de negocio
 
 
@@ -37,5 +40,11 @@ namespace MyPrimeraApp.Entidades
             Edad = edad;
         }
 
+        public Alumno(string v1, string v2, int v3)
+        {
+            this.v1 = v1;
+            this.v2 = v2;
+            this.v3 = v3;
+        }
     }
 }

@@ -7,11 +7,7 @@ namespace MyPrimeraApp.Repositorio
 
         public void Guardar(Alumno alumno)
         {
-            ////Validar que el alumno no existe
-            //if (Obtener().Any(x => x.Email == alumno.Email))
-            //{
-            //    throw new InvalidOperationException(  "El alumno ya existe");
-            //}
+           
 
             using (StreamWriter sw = new StreamWriter("C:\\BaseDeDatos\\Alumnos.txt", true))
             {
@@ -35,7 +31,7 @@ namespace MyPrimeraApp.Repositorio
                 while ((linea = sr.ReadLine()) != null)
                 {
                     var valores = linea.Split(',');
-
+                  
                     var alumno = new Alumno(valores[0], valores[1], int.Parse(valores[2]));
 
                     alumnos.Add(alumno);
